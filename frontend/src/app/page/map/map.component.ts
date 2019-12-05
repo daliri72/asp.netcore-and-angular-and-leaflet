@@ -127,6 +127,7 @@ export class MapComponent extends AppComponentBase implements OnInit {
 
 
   openModal = () => {
+    this.model = {} as any;
     this.GetAllLocationType();
 
     this.modalRefMapModal = this.bsModalService.show(

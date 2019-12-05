@@ -1,2 +1,2 @@
-dotnet-ef --startup-project ../ASPNETCore2JwtAuthentication.WebApp/ database update
+dotnet-ef --startup-project ../LocationMap.WebApp/ database update
 pause

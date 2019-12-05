@@ -13,64 +13,6 @@
       <e p="LocationMap.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="src" t="Include">
-        <e p="ASPNETCore2JwtAuthentication.WebApp" t="IncludeRecursive">
-          <e p=".bowerrc" t="Include" />
-          <e p="_0-restore.bat" t="Include" />
-          <e p="_1-dotnet_run.bat" t="Include" />
-          <e p="appsettings.Development.json" t="Include" />
-          <e p="appsettings.json" t="Include" />
-          <e p="bin" t="ExcludeRecursive" />
-          <e p="bower.json" t="Include" />
-          <e p="bundleconfig.json" t="Include" />
-          <e p="Controllers" t="Include">
-            <e p="LocationController.cs" t="Include" />
-          </e>
-          <e p="LocationMap.WebApp.csproj" t="IncludeRecursive" />
-          <e p="Models" t="Include">
-            <e p="ApiSettings.cs" t="Include" />
-          </e>
-          <e p="node_modules\@types" t="IncludeRecursive">
-            <e p="jwt-decode" t="IncludeRecursive" />
-          </e>
-          <e p="node_modules\jwt-decode" t="IncludeRecursive" />
-          <e p="obj" t="ExcludeRecursive">
-            <e p="Debug" t="Include">
-              <e p="netcoreapp2.2" t="Include">
-                <e p="LocationMap.WebApp.AssemblyInfo.cs" t="Include" />
-              </e>
-            </e>
-          </e>
-          <e p="package.json" t="Include" />
-          <e p="Program.cs" t="Include" />
-          <e p="Properties" t="Include">
-            <e p="launchSettings.json" t="Include" />
-          </e>
-          <e p="Startup.cs" t="Include" />
-          <e p="wwwroot" t="Include">
-            <e p="app_data" t="Include">
-              <e p="ASPNETCore21JwtAuthDB.mdf" t="Include" />
-              <e p="ASPNETCore21JwtAuthDB_log.ldf" t="Include" />
-              <e p="git.keep" t="Include" />
-              <e p="mapdb.mdf" t="Include" />
-              <e p="mapdb_log.ldf" t="Include" />
-            </e>
-            <e p="favicon.ico" t="Include" />
-            <e p="images" t="Include">
-              <e p="location.PNG" t="Include" />
-            </e>
-            <e p="index.html" t="Include" />
-            <e p="js" t="Include">
-              <e p="site.min.js" t="Include" />
-            </e>
-            <e p="uploads" t="Include">
-              <e p="157-1578490_coordinates-location-point-gps-svg-png-icon-free.png" t="Include" />
-              <e p="70471402_156153492146264_1007064781207317030_n.jpg" t="Include" />
-              <e p="alex-honnold-climbing.jpg" t="Include" />
-              <e p="arapiles.jpg" t="Include" />
-              <e p="man.jpeg" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="LocationMap.Common" t="IncludeRecursive">
           <e p="bin" t="ExcludeRecursive" />
           <e p="GuardExtensions.cs" t="Include" />
@@ -92,11 +34,6 @@
             <e p="IUnitOfWork.cs" t="Include" />
           </e>
           <e p="LocationMap.DataLayer.csproj" t="IncludeRecursive" />
-          <e p="Migrations" t="Include">
-            <e p="13980913075032_V2019_12_04_1120.cs" t="Include" />
-            <e p="13980913075032_V2019_12_04_1120.Designer.cs" t="Include" />
-            <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
-          </e>
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="netstandard2.0" t="Include">
@@ -132,6 +69,61 @@
               <e p="netstandard2.0" t="Include">
                 <e p="LocationMap.Services.AssemblyInfo.cs" t="Include" />
               </e>
+            </e>
+          </e>
+        </e>
+        <e p="LocationMap.WebApp" t="IncludeRecursive">
+          <e p=".bowerrc" t="Include" />
+          <e p="_0-restore.bat" t="Include" />
+          <e p="_1-dotnet_run.bat" t="Include" />
+          <e p="appsettings.Development.json" t="Include" />
+          <e p="appsettings.json" t="Include" />
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="bower.json" t="Include" />
+          <e p="bundleconfig.json" t="Include" />
+          <e p="Controllers" t="Include">
+            <e p="LocationController.cs" t="Include" />
+          </e>
+          <e p="LocationMap.WebApp.csproj" t="IncludeRecursive" />
+          <e p="Models" t="Include">
+            <e p="ApiSettings.cs" t="Include" />
+          </e>
+          <e p="node_modules\@types" t="IncludeRecursive">
+            <e p="jwt-decode" t="IncludeRecursive" />
+          </e>
+          <e p="node_modules\jwt-decode" t="IncludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netcoreapp2.2" t="Include">
+                <e p="LocationMap.WebApp.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="package.json" t="Include" />
+          <e p="Program.cs" t="Include" />
+          <e p="Properties" t="Include">
+            <e p="launchSettings.json" t="Include" />
+          </e>
+          <e p="Startup.cs" t="Include" />
+          <e p="wwwroot" t="Include">
+            <e p="app_data" t="Include">
+              <e p="git.keep" t="Include" />
+              <e p="locationDb.mdf" t="Include" />
+              <e p="locationDb_log.ldf" t="Include" />
+            </e>
+            <e p="favicon.ico" t="Include" />
+            <e p="images" t="Include">
+              <e p="location.PNG" t="Include" />
+            </e>
+            <e p="js" t="Include">
+              <e p="site.min.js" t="Include" />
+            </e>
+            <e p="uploads" t="Include">
+              <e p="157-1578490_coordinates-location-point-gps-svg-png-icon-free.png" t="Include" />
+              <e p="70471402_156153492146264_1007064781207317030_n.jpg" t="Include" />
+              <e p="alex-honnold-climbing.jpg" t="Include" />
+              <e p="arapiles.jpg" t="Include" />
+              <e p="man.jpeg" t="Include" />
             </e>
           </e>
         </e>

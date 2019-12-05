@@ -10,14 +10,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LocationMap.DataLayer.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("13980913075032_V2019_12_04_1120")]
-    partial class V2019_12_04_1120
+    [Migration("13980914140404_V2019_12_05_1733")]
+    partial class V2019_12_05_1733
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.4-servicing-10062")
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -27,10 +27,7 @@ namespace LocationMap.DataLayer.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<bool?>("Draggable")
-                        .HasColumnName("draggable");
-
-                    b.Property<string>("Label");
+                    b.Property<string>("FileName");
 
                     b.Property<string>("Lat");
 
@@ -39,8 +36,6 @@ namespace LocationMap.DataLayer.Migrations
                     b.Property<string>("LocationName");
 
                     b.Property<int?>("LocationTypeId");
-
-                    b.Property<string>("Logo");
 
                     b.HasKey("Id");
 

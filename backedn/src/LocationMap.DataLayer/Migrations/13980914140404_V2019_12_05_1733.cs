@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace LocationMap.DataLayer.Migrations
 {
-    public partial class V2019_12_04_1120 : Migration
+    public partial class V2019_12_05_1733 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,11 +28,9 @@ namespace LocationMap.DataLayer.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     LocationName = table.Column<string>(nullable: true),
                     LocationTypeId = table.Column<int>(nullable: true),
-                    Logo = table.Column<string>(nullable: true),
                     Lat = table.Column<string>(nullable: true),
                     Lng = table.Column<string>(nullable: true),
-                    Label = table.Column<string>(nullable: true),
-                    draggable = table.Column<bool>(nullable: true)
+                    FileName = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

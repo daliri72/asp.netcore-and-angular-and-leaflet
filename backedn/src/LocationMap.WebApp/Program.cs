@@ -12,7 +12,7 @@ namespace LocationMap.WebApp
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                 .UseUrls("https://localhost:5001/")
+                 .UseUrls("http://localhost:5000/")
                 .UseStartup<Startup>();
     }
 }

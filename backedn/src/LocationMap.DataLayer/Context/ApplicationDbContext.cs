@@ -21,7 +21,6 @@ namespace LocationMap.DataLayer.Context
             
             builder.Entity<Location>(entity =>
             {
-                entity.Property(e => e.Draggable).HasColumnName("draggable");
 
                 entity.HasOne(d => d.LocationType)
                     .WithMany(p => p.Location)
