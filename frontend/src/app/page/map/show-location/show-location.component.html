@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col">
+    <div id="mapLoc" style="margin-top: 10px" class="card">
+      <div class="card-body">
+        <div clickCatcher leaflet style="height: 800px;"
+             [leafletOptions]="options">
+          <div *ngFor="let m of markers" [leafletLayer]="m" ></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

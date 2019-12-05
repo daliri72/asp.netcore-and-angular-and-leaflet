@@ -1,0 +1,103 @@
+<div class="row" style="margin-top: 20px">
+
+  <div class="col">
+    <button class="btn btn-success" (click)="openModal()">Add Location</button>
+
+
+    <button style="margin-left: 5px" class="btn btn-info" (click)="this.apiService.mapSource.next(true)">Reload</button>
+  </div>
+</div>
+
+<app-show-location></app-show-location>
+
+
+<ng-template #itemMapModal>
+  <div class="modal-header">
+    <strong class="modal-title pull-left">
+      Add Location
+    </strong>
+    <button type="button" class="close  pull-right " aria-label="Close"
+            (click)="modalRefMapModal.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body ">
+    <form #register="ngForm" novalidate>
+
+      <div class="form-group row">
+        <label for="locationName" class="col-sm-4 col-form-label">Location Name :</label>
+        <div class="col-sm-8">
+          <input class="form-control" type="text" id="locationName" [(ngModel)]="model.locationName"
+                 name="locationName">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="mapLoc" class="col-sm-4 col-form-label">Location on map :</label>
+        <div class="col-sm-8">
+          <div id="mapLoc" style="margin-top: 10px" class="card">
+
+            <div class="card-body">
+
+
+              <div clickCatcher leaflet style="height: 300px;"
+                   (leafletClick)="handleEvent('click', $event)"
+                   [leafletOptions]="options">
+                <div *ngFor="let m of markers" [leafletLayer]="m" title="asd"></div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="locationTypeId" class="col-sm-4 col-form-label">Location Type :</label>
+        <div class="col-sm-8">
+          <select class="form-control" id="locationTypeId" [(ngModel)]="model.locationTypeId" name="id">
+            <option disabled>Select</option>
+            <option *ngFor="let item of listLocationType" [ngValue]="item.id" >
+              {{item.name}}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="fileName" class="col-sm-4 col-form-label"> Logo : </label>
+        <div class="col-sm-8">
+          <input id="fileName" (change)="fileChange($event)" type="file"
+                 class="form-control">
+
+
+          <a *ngIf="model.fileName !== null "
+             [attr.href]="model.fileName" target="_blank">Show File</a>
+        </div>
+      </div>
+
+
+    </form>
+  </div>
+  <div class="modal-footer ">
+
+    <button class="btn  btn-labeled btn-warning "
+            (click)="modalRefMapModal.hide()">
+      Close
+    </button>
+
+    <button style="margin-right: 5px" class="btn  btn-labeled btn-success "
+            (click)="save()">
+      Save
+    </button>
+
+
+  </div>
+
+</ng-template>
+
+
