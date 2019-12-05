@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+	<TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="node_modules\**" />
+    <Content Remove="node_modules\**" />
+    <EmbeddedResource Remove="node_modules\**" />
+    <None Remove="node_modules\**" />
+  </ItemGroup>  
+  <ItemGroup>
+    <ProjectReference Include="..\LocationMap.Common\LocationMap.Common.csproj" />
+    <ProjectReference Include="..\LocationMap.DataLayer\LocationMap.DataLayer.csproj" />
+    <ProjectReference Include="..\LocationMap.DomainClasses\LocationMap.DomainClasses.csproj" />
+    <ProjectReference Include="..\LocationMap.Services\LocationMap.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+  <ItemGroup>    
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.8.391" />    
+  </ItemGroup>
+  <ItemGroup>
+    <!-- extends watching group to include *.js files -->
+    <Watch Include="**\*.js" Exclude="node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*;wwwroot\**\*;src\**\*" />
+  </ItemGroup>  
+  <Target Name="PrecompileScript" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet bundle" />
+  </Target>
+</Project>

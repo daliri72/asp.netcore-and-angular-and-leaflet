@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LocationMap.Common\LocationMap.Common.csproj" />
+    <ProjectReference Include="..\LocationMap.DataLayer\LocationMap.DataLayer.csproj" />
+    <ProjectReference Include="..\LocationMap.DomainClasses\LocationMap.DomainClasses.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Antiforgery" Version="2.2.0" />
+  </ItemGroup>
+</Project>
