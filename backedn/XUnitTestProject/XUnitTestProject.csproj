@@ -17,8 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\ASPNETCore2JwtAuthentication.WebApp\LocationMap.WebApp.csproj" />
+    <ProjectReference Include="..\src\LocationMap.WebApp\LocationMap.WebApp.csproj" />
     <ProjectReference Include="..\src\LocationMap.Services\LocationMap.Services.csproj" />
+    <ProjectReference Include="..\src\LocationMap.WebApp\LocationMap.WebApp.csproj" />
   </ItemGroup>
 
 </Project>

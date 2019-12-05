@@ -10,6 +10,6 @@ export interface IAppConfig {
 
 export const AppConfig: IAppConfig = {
 
-  apiEndpoint: 'https://localhost:5001/api',
-  endpoint: 'https://localhost:5001/',
+  apiEndpoint: 'http://localhost:5000/api',
+  endpoint: 'http://localhost:5000/',
 };

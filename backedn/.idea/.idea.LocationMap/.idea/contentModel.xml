@@ -56,7 +56,7 @@
             </e>
             <e p="favicon.ico" t="Include" />
             <e p="images" t="Include">
-              <e p="jwtauth.png" t="Include" />
+              <e p="location.PNG" t="Include" />
             </e>
             <e p="index.html" t="Include" />
             <e p="js" t="Include">

@@ -12,6 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Linq;
 
 namespace LocationMap.WebApp
 {
@@ -62,6 +63,32 @@ namespace LocationMap.WebApp
                         .AllowAnyMethod()
                         .AllowAnyHeader()
                         .AllowCredentials());
+            });
+
+
+
+
+            // Register the Swagger generator, defining one or more Swagger documents
+            services.AddSwaggerGen(setupAction =>
+            {
+                setupAction.SwaggerDoc(
+                    name: "LibraryOpenAPISpecification",
+                    info: new Microsoft.OpenApi.Models.OpenApiInfo()
+                    {
+                        Title = "backend location",
+                        Version = "0.1",
+                        Description = "The All web service",
+                        Contact = new Microsoft.OpenApi.Models.OpenApiContact()
+                        {
+                            Email = "daliri72@gmail.com",                                                       
+                        }
+                     
+                    });
+                
+                var xmlFiles = Directory.GetFiles(AppContext.BaseDirectory,
+                    "*.xml",
+                    SearchOption.TopDirectoryOnly).ToList();
+                xmlFiles.ForEach(xmlFile => setupAction.IncludeXmlComments(xmlFile));
             });
 
 
@@ -124,6 +151,18 @@ namespace LocationMap.WebApp
 
             app.UseStatusCodePages();
             app.UseDefaultFiles(); // so index.html is not required
+
+
+            // app.UseHttpsRedirection();
+            app.UseSwagger();
+            app.UseSwaggerUI(setupAction =>
+            {
+                setupAction.SwaggerEndpoint(
+                    "/swagger/LibraryOpenAPISpecification/swagger.json",
+                    "Library API");
+                setupAction.RoutePrefix = "";
+            });
+
             app.UseStaticFiles();
 
             app.UseMvc(routes =>

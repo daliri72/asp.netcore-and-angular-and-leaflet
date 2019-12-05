@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMap.DomainClasses",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMap.Services", "src\LocationMap.Services\LocationMap.Services.csproj", "{F21D2BB4-ABA5-4AAD-BE37-0F077A94BF3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMap.WebApp", "src\ASPNETCore2JwtAuthentication.WebApp\LocationMap.WebApp.csproj", "{7A1C27BA-7430-463D-AE3E-0C949AF121DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMap.WebApp", "src\LocationMap.WebApp\LocationMap.WebApp.csproj", "{7A1C27BA-7430-463D-AE3E-0C949AF121DB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocationMap.DataLayer", "src\LocationMap.DataLayer\LocationMap.DataLayer.csproj", "{40AE4F92-F6EA-479A-AC6C-A8A0ABECA619}"
 EndProject

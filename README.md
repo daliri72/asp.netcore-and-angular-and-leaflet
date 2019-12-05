@@ -4,7 +4,7 @@ A simple app with Asp.net core 2.1 and Angular 8
 
 
 
-![jwtauth](/backedn/src/ASPNETCore2JwtAuthentication.WebApp/wwwroot/images/location.PNG)
+![jwtauth](/backedn/src/LocationMap.WebApp/wwwroot/images/location.PNG)
 
 
 - A separated EF Core data layer with enabled migrations.
@@ -16,7 +16,7 @@ How to run the Angular 7.0+ Client
 
 - Update all of the outdated global dependencies using the `npm update -g` command.
 - Install the `Angular-CLI`.
-- Open a command prompt console and then navigate to src/ASPNETCore2JwtAuthentication.AngularClient/ folder.
+- Open a command prompt console and then navigate to frontend/ folder.
 - Now run the following commands:
 
 ```PowerShell
@@ -24,7 +24,7 @@ npm update -g
 npm install
 ```
 
-- Then open another command prompt console and navigate to backend/src/ASPNETCore2JwtAuthentication.WebApp/ folder.
+- Then open another command prompt console and navigate to backend/src/LocationMap.WebApp/ folder.
 - Now run the following commands:
 
 ```PowerShell
