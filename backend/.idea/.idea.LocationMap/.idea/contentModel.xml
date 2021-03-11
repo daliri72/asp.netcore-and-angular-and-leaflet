@@ -34,6 +34,11 @@
             <e p="IUnitOfWork.cs" t="Include" />
           </e>
           <e p="LocationMap.DataLayer.csproj" t="IncludeRecursive" />
+          <e p="Migrations" t="Include">
+            <e p="13980914140404_V2019_12_05_1733.cs" t="Include" />
+            <e p="13980914140404_V2019_12_05_1733.Designer.cs" t="Include" />
+            <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+          </e>
           <e p="obj" t="ExcludeRecursive">
             <e p="Debug" t="Include">
               <e p="netstandard2.0" t="Include">
@@ -123,7 +128,7 @@
               <e p="70471402_156153492146264_1007064781207317030_n.jpg" t="Include" />
               <e p="alex-honnold-climbing.jpg" t="Include" />
               <e p="arapiles.jpg" t="Include" />
-              <e p="man.jpeg" t="Include" />
+              <e p="Empty2.jpg" t="Include" />
             </e>
           </e>
         </e>
